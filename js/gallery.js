@@ -69,14 +69,9 @@ const markup = images
 
 ulElem.insertAdjacentHTML('beforeend', markup);
 
-const galleryLink = document.querySelectorAll('.gallery-link');
-galleryLink.forEach((elem) => {
-  elem.addEventListener('click', (e) => {
-    e.preventDefault();
-  });
-});
-
 ulElem.addEventListener('click', (e) => {
+  e.preventDefault();
+
   if (e.target.nodeName === 'IMG') {
     console.log(e.target.dataset.source);
 
